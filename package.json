@@ -1,0 +1,11 @@
+{
+  "name": "wcc2_complementarylistening",
+  "version": "1.0.0",
+  "description": "multi device complementary listening experience",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "francesco-angelini",
+  "license": "ISC"
+}
