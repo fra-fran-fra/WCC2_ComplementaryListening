@@ -5,8 +5,6 @@ const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
 
-const host = "192.168.0.83";
-
 app.use(express.static("public"));
 
 server.listen(3000, () => {
@@ -18,6 +16,8 @@ let serverNumUsers = 0;
 io.on("connection", (socket) => {
   console.log("a user connected");
 
+  /*Use of io.emit to notify ALL clients that
+  a user has either joined or left the experience*/
   serverNumUsers++;
   io.emit('userAdded', {
     numUsers: serverNumUsers
